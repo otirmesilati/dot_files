@@ -1,0 +1,99 @@
+add_newline = false
+
+
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$python\
+$rust\
+$golang\
+$time\
+$cmd_duration\
+$line_break\
+$character
+"""
+
+
+
+
+
+[username]
+style_user = "bold yellow"
+show_always = false
+
+[hostname]
+style = "bold dimmed white"
+ssh_only = true
+
+
+
+
+
+[directory]
+
+style = "bold cyan"
+truncation_length = 3
+truncation_symbol = "…/"
+
+
+
+
+
+[git_commit]
+symbol = ""
+style = "bold bright-yellow"
+
+[git_branch]
+symbol = ""
+style = "bold magenta"
+
+[git_status]
+symbol = ""
+style = "bold red"
+
+
+
+
+
+
+[nodejs]
+style = "bold green"
+
+[python]
+style = "bold bright-yellow"
+
+[rust]
+style = "bold red"
+
+[golang]
+style = "bold cyan"
+
+
+
+
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "bold blue"
+
+
+
+
+
+[cmd_duration]
+min_time = 500
+style = "bold bright-black"
+format = "took [$duration]($style) "
+
+
+
+
+
+[character]
+success_symbol = "[➜](bold bright-green)"
+error_symbol = "[✗](bold bright-red)"
