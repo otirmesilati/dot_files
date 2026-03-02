@@ -12,6 +12,7 @@ $python\
 $rust\
 $golang\
 $time\
+$battery \
 $cmd_duration\
 $line_break\
 $character
@@ -34,10 +35,27 @@ ssh_only = true
 
 
 [directory]
-
 style = "bold cyan"
 truncation_length = 3
 truncation_symbol = "…/"
+
+
+
+
+
+[battery]
+full_symbol = "🔋 "
+charging_symbol = "⚡ "
+discharging_symbol = "🔋 "
+format = "[$percentage]($style)"
+
+
+
+[[battery.display]]
+threshold = 100
+style = "bold blue"
+
+
 
 
 
@@ -52,7 +70,7 @@ symbol = ""
 style = "bold magenta"
 
 [git_status]
-symbol = ""
+format = '[ $symbol$all_status]($style)'
 style = "bold red"
 
 
@@ -95,5 +113,6 @@ format = "took [$duration]($style) "
 
 
 [character]
-success_symbol = "[➜](bold bright-green)"
+success_symbol = "[](bold bright-green)"
 error_symbol = "[✗](bold bright-red)"
+
